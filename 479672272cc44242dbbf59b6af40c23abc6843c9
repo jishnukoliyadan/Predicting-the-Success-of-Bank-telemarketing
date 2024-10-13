@@ -1,0 +1,44 @@
+'plot_target' might fetch error on Kaggle due to version change in Seaborn.
+
+'plotCategoricalPlot' function on the existing notbook will also fetch error on Kaggle.
+Thus insted of the code in the Notebook, use below code. This is also due to Seaborn version change.
+
+def plotCategoricalPlot(df: pd.DataFrame, on_feature: list[str], title_text: str) -> None:
+
+    fig = plt.figure(figsize = (18,  3 * 5))
+    gs = GridSpec(3, 3)
+
+    if title_text == 'Testing Data': df = df.drop('target', axis = 1).copy(deep  =True)
+
+    tar_present = 'target' in df.columns
+
+    for idx, col in enumerate(on_feature):
+
+        if tar_present:
+            dodge, hue = 'auto', 'target'
+        else:
+            dodge, hue = False, col
+
+        if idx+1 == len(on_feature):
+
+            ax = plt.subplot(gs[idx // 3, idx % 3:])
+            img = sns.countplot(data = df.fillna('NaN'), x = 'job', hue = hue, palette = 'Paired', orient = 'v', ax = ax, dodge = dodge)
+        else:
+            ax = plt.subplot(gs[idx // 3, idx % 3])
+            img = sns.countplot(data = df.fillna('NaN'), x = col, hue = hue, palette = 'Paired', orient = 'v', ax = ax, dodge = dodge)
+
+        if dodge == 'auto':
+            for p in img.patches:
+                if p.get_height() > 0: # annotates only if the height is > 0
+                    ax.annotate('{:,.0f}'.format(p.get_height()), (p.get_x() + p.get_width() / 2, p.get_height()), ha = 'center', va = 'center', xytext = (0, 10), textcoords = 'offset points', fontsize = 9)
+
+        if tar_present:
+            ax.set_title(f'{col} vs target')
+        else:
+            ax.set_title(col)
+            ax.legend_.remove()
+        ax.set_xlabel('')
+
+    fig.suptitle(f'Categorical features on {title_text} Set')
+    plt.tight_layout(pad = 2.5)
+    plt.show()
