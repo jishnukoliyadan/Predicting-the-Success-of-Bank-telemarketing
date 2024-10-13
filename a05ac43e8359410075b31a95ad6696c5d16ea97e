@@ -1,0 +1,11 @@
+1. Data files locations changed to be more organized.
+2. User defined functions are annotated and doc strings added.
+3. Observations added for the plots and charts.
+4. Alignemnt corrected to have more visualy pleasing structure in Kaggle.
+These above 4 are the modifications from the previous commit.
+
+1. Feature engineering done, and generated more features and handled missing values.
+2. Data splitted into train and test for model valuation.
+3. Data scaled and tranformed using Normalizer and OHE.
+4. Dummy / Baseline classifier model created for benchmarking purposes.
+5. Created submission file using DummyClassifier model.
