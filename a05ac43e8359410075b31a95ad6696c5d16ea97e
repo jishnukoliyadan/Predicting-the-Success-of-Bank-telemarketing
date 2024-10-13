@@ -3,7 +3,7 @@
 3. Observations added for the plots and charts.
 4. Alignemnt corrected to have more visualy pleasing structure in Kaggle.
 
-These above 4 are the modifications from the previous commit 4796722.
+These above 4 are the modifications from the previous commit id 4796722.
 
 1. Feature engineering done, and generated more features and handled missing values.
 2. Data splitted into train and test for model valuation.
