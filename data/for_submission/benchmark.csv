@@ -1,4 +1,4 @@
-id,target,DummyClassifier,LogisticRegression-Hyper-Base-FullSet,SVMLinear-Base,DecisionTreeClassifier-Hyper-Base-FullSet,RandomForestClassifier-Hyper-SMOTE-FullSet,XGBClassifier-Hyper-SMOTE-FullSet,LGBMClassifier-Hyper-SMOTE-FullSet
+id,target,DummyClassifier,LogisticRegression-Hyper-Base-FullSet,SVMLinear-Base,DecisionTreeClassifier-Hyper-Base-FullSet,RandomForestClassifier-Hyper-Base-FullSet,XGBClassifier-Hyper-Base-FullSet,LGBMClassifier-Hyper-Base-FullSet
 0,no,yes,no,no,no,no,no,no
 1,no,no,no,no,no,no,no,no
 2,no,yes,no,no,no,no,no,no
