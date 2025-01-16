@@ -2,11 +2,11 @@
 
 **MLP Project T32024** :: [Kaggle Competition](https://www.kaggle.com/competitions/predict-the-success-of-bank-telemarketing)
 
-**Dataset Description**
+## Dataset
 
 The data is related with direct marketing campaigns of a banking institution. The marketing campaigns were based on phone calls. Often, more than one contact to the same client was required, in order to access if the product (bank term deposit) would be ('yes') or not ('no') subscribed.
 
-**Files**
+## Files
 - train.csv - the training set
 - test.csv - the test set
 - sample_submission.csv - a sample submission file in the correct format
@@ -32,11 +32,11 @@ The data is related with direct marketing campaigns of a banking institution. Th
 
 16. target: has the client subscribed a term deposit? (binary: "yes","no")
 
-**Evaluation**
+## Evaluation
 
 Submissions are evaluated on f1_score(average='macro') between the predicted classes and the True target.
 
-**Libraries allowed**
+## Only libraries allowed
 1. NumPy
 1. Pandas
 1. Matplotlib
@@ -50,4 +50,6 @@ Submissions are evaluated on f1_score(average='macro') between the predicted cla
 1. Lightgbm
 1. Plotly
 
+## Competition Result : TOP 2 percentile result
 
+![](https://github.com/user-attachments/assets/bb56ef8f-38c8-4924-abee-9e70e1d223d4)
